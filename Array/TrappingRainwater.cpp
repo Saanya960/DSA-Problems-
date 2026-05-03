@@ -1,7 +1,9 @@
 #include <iostream>
+#include <algorithm>
+#include <vector>
 using namespace std;
 
-int trap() {
+int trap(vector<int>& height) {
         int n=height.size();
         vector<int> leftMax(n);
         leftMax[0]=height[0];
@@ -21,5 +23,7 @@ int trap() {
     }
 
 int main(){
-    trap()
+   vector<int> height={0,1,0,2,1,0,1,3,2,1,2,1};
+    cout<<trap(height);
+    return 0;
 }
